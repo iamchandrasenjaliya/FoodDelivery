@@ -9,6 +9,7 @@ class Master(models.Model):
     class Meta:
         db_table = 'master'
 
+
 gender_choices = (
     ('m', 'male'),
     ('f', 'female'),

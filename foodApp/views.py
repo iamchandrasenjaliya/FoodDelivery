@@ -53,10 +53,9 @@ def create_otp(request):
 
     send_mail(subject, message, email_from, email_to_list)
 
-# verification
+# verification functionality
 def verify_otp(request):
     otp = int(request.POST['otp'])
-
     if otp == request.session['otp']:
         master = Master.objects.create(
             Email = request.session['reg_data']['email'],
